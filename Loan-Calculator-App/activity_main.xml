@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/labelLoanAmount"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Enter your loan amount"
+        android:textColor="#7C0A02"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/loan_amount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelLoanAmount"
+        app:layout_constraintStart_toEndOf="@+id/labelLoanAmount" />
+
+    <TextView
+        android:id="@+id/labelAPR"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Enter your APR %"
+        android:textColor="#4F7942"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/labelLoanAmount"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/APR"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/labelAPR"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelAPR"/>
+
+    <TextView
+        android:id="@+id/labelYEARS"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Enter loan years"
+        android:textColor="#8080FF"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/labelAPR"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/LoanYears"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="0"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/labelYEARS"
+        app:layout_constraintBaseline_toBaselineOf="@id/labelYEARS"/>
+
+    <TextView
+        android:id="@+id/monthly_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Monthly Payments"
+        android:backgroundTint="#4F7942"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/labelYEARS"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#7C0A02"
+        android:text="Calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthly_payment" />
+
+    <Button
+        android:id="@+id/Reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:backgroundTint="#4F7942"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/Calculate_button"
+        app:layout_constraintBaseline_toBaselineOf="@id/Calculate_button"/>
+
+    <Button
+        android:id="@+id/Show_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Table"
+        android:backgroundTint="@color/purple_200"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/Reset_button"
+        app:layout_constraintBaseline_toBaselineOf="@id/Reset_button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
